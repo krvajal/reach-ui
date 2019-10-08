@@ -1,3 +1,7 @@
+:root {
+  --reach-accordion: 1;
+}
+
 [data-reach-accordion] {
   border: 1px solid #c5c5c5;
 }
