@@ -8,12 +8,12 @@ import {
 } from "../src";
 import ExampleForm from "./ExampleForm";
 
-export const name = "Basic";
+export const name = "With Toggle Restraints";
 
 export const Example = () => (
-  <Accordion>
+  <Accordion allowMultiple={false} allowToggle={false}>
     <AccordionItem>
-      <AccordionHeader>You can toggle me</AccordionHeader>
+      <AccordionHeader>You can open me</AccordionHeader>
       <AccordionPanel>
         Ante rhoncus facilisis iaculis nostra faucibus vehicula ac consectetur
         pretium, lacus nunc consequat id viverra facilisi ligula eleifend,
@@ -21,7 +21,7 @@ export const Example = () => (
       </AccordionPanel>
     </AccordionItem>
     <AccordionItem disabled>
-      <AccordionHeader>You can't toggle me</AccordionHeader>
+      <AccordionHeader>You can't touch me</AccordionHeader>
       <AccordionPanel>
         Ante rhoncus facilisis iaculis nostra faucibus vehicula ac consectetur
         pretium, lacus nunc consequat id viverra facilisi ligula eleifend,
@@ -29,7 +29,9 @@ export const Example = () => (
       </AccordionPanel>
     </AccordionItem>
     <AccordionItem>
-      <AccordionHeader>You can also toggle me</AccordionHeader>
+      <AccordionHeader>
+        You can only close me by opening another
+      </AccordionHeader>
       <AccordionPanel>
         <ExampleForm />
         Ante rhoncus facilisis iaculis nostra faucibus vehicula ac consectetur
